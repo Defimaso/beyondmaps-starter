@@ -819,6 +819,194 @@ const styles = `
   }
 
   .scenario-note strong { color: #60a5fa; }
+
+  /* Living section */
+  .living-hero {
+    text-align: center;
+    padding: 48px 24px;
+    background: linear-gradient(135deg, rgba(251,191,36,0.04) 0%, rgba(59,130,246,0.04) 100%);
+    border: 1px solid rgba(251,191,36,0.15);
+    border-radius: 20px;
+    margin-bottom: 48px;
+  }
+
+  .living-hero h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 700;
+    color: #f1f5f9;
+    margin-bottom: 8px;
+  }
+
+  .living-hero p {
+    font-size: 15px;
+    color: #94a3b8;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .living-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+
+  @media (max-width: 768px) {
+    .living-grid { grid-template-columns: 1fr; }
+  }
+
+  .living-card {
+    background: #111827;
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .living-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #f59e0b, #eab308);
+  }
+
+  .living-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .living-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .living-row:last-child { border-bottom: none; }
+
+  .living-label {
+    font-size: 13px;
+    color: #94a3b8;
+    font-weight: 500;
+  }
+
+  .living-val {
+    font-size: 14px;
+    font-weight: 700;
+    color: #e2e8f0;
+    text-align: right;
+  }
+
+  .living-val.gold { color: #fbbf24; }
+
+  .living-note {
+    font-size: 11px;
+    color: #64748b;
+    margin-top: 2px;
+  }
+
+  .living-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0 0;
+    margin-top: 8px;
+    border-top: 2px solid rgba(255,255,255,0.08);
+  }
+
+  .living-total-label {
+    font-size: 15px;
+    font-weight: 700;
+    color: #e2e8f0;
+  }
+
+  .living-total-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fbbf24;
+  }
+
+  /* Flow diagram */
+  .flow-diagram {
+    background: #111827;
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 48px;
+  }
+
+  .flow-diagram h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #f1f5f9;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .flow-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+  }
+
+  .flow-step {
+    text-align: center;
+    padding: 16px 20px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+    min-width: 140px;
+  }
+
+  .flow-step-label {
+    font-size: 11px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+
+  .flow-step-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #f1f5f9;
+  }
+
+  .flow-step-value.green { color: #4ade80; }
+  .flow-step-value.gold { color: #fbbf24; }
+  .flow-step-value.red { color: #f87171; }
+
+  .flow-step-sub {
+    font-size: 11px;
+    color: #64748b;
+    margin-top: 2px;
+  }
+
+  .flow-arrow {
+    font-size: 24px;
+    color: #334155;
+    padding: 0 4px;
+  }
+
+  @media (max-width: 768px) {
+    .flow-steps { flex-direction: column; }
+    .flow-arrow { transform: rotate(90deg); }
+  }
 `
 
 const dubaiCosts = [
@@ -1296,6 +1484,305 @@ function App() {
             La partecipazione qualificata (&#8805;10%) e necessaria per l'imposizione ridotta.
             Withholding tax UAE: 0%. Withholding tax Malta su non residenti: 0%.
             In entrambi i casi, la Svizzera tassa il dividendo ricevuto come reddito personale.
+          </div>
+
+          {/* ====== SEZIONE 5: VIVERE IN SVIZZERA — GANDRIA/LUGANO ====== */}
+          <div className="section-divider"><span>&#x1F3E0;</span></div>
+
+          <div className="living-hero">
+            <h2>&#x1F1E8;&#x1F1ED; Vivere a Gandria (Lugano)</h2>
+            <p>
+              Quadro completo per chi vive a Gandria, al confine con Porlezza.
+              Stipendio minimo da pagarsi, contributi AVS, cassa malati, costo vita e dividendi.
+              Tutto nel Canton Ticino, con il lago di Lugano fuori dalla finestra.
+            </p>
+          </div>
+
+          {/* Flow: come funziona il flusso soldi */}
+          <div className="flow-diagram">
+            <h3>Come funziona il flusso dei soldi</h3>
+            <div className="flow-steps">
+              <div className="flow-step">
+                <div className="flow-step-label">Utili societa</div>
+                <div className="flow-step-value green">0% tax</div>
+                <div className="flow-step-sub">Corporate tax UAE</div>
+              </div>
+              <div className="flow-arrow">&#x27A1;&#xFE0F;</div>
+              <div className="flow-step">
+                <div className="flow-step-label">Stipendio minimo</div>
+                <div className="flow-step-value gold">~24.000 CHF/anno</div>
+                <div className="flow-step-sub">Copre AVS + base vita</div>
+              </div>
+              <div className="flow-arrow">&#x27A1;&#xFE0F;</div>
+              <div className="flow-step">
+                <div className="flow-step-label">Dividendi</div>
+                <div className="flow-step-value gold">Resto utili</div>
+                <div className="flow-step-sub">Tassati 70% federale</div>
+              </div>
+              <div className="flow-arrow">&#x27A1;&#xFE0F;</div>
+              <div className="flow-step">
+                <div className="flow-step-label">Tassa Ticino</div>
+                <div className="flow-step-value red">~15-17%</div>
+                <div className="flow-step-sub">Effettiva sul dividendo</div>
+              </div>
+              <div className="flow-arrow">&#x27A1;&#xFE0F;</div>
+              <div className="flow-step">
+                <div className="flow-step-label">In tasca</div>
+                <div className="flow-step-value green">83-85%</div>
+                <div className="flow-step-sub">Netto reale</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="living-grid">
+            {/* Stipendio + AVS */}
+            <div className="living-card">
+              <h3>&#x1F4B3; Stipendio minimo + contributi</h3>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Stipendio lordo consigliato</div>
+                  <div className="living-note">Minimo per coprire AVS e costi base</div>
+                </div>
+                <div className="living-val gold">~24.000-30.000 CHF/anno</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">AVS/AI/IPG (quota dipendente 5.3%)</div>
+                  <div className="living-note">Uguale quota a carico societa</div>
+                </div>
+                <div className="living-val">~1.270-1.590 CHF</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Assicurazione disoccupazione (AD)</div>
+                  <div className="living-note">1.1% fino a 148.200 CHF</div>
+                </div>
+                <div className="living-val">~264-330 CHF</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Imposta alla fonte su stipendio</div>
+                  <div className="living-note">Ticino, aliquota bassa su redditi bassi</div>
+                </div>
+                <div className="living-val">~3-5%</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Alternativa: senza stipendio</div>
+                  <div className="living-note">Contributi AVS come "persona senza attivita lucrativa" basati su patrimonio</div>
+                </div>
+                <div className="living-val">min 530 CHF/anno</div>
+              </div>
+              <div className="living-total">
+                <div className="living-total-label">Netto mensile da stipendio</div>
+                <div className="living-total-value">~1.800-2.200 CHF</div>
+              </div>
+            </div>
+
+            {/* Costo vita Gandria */}
+            <div className="living-card">
+              <h3>&#x1F3E1; Costo vita a Gandria / Lugano</h3>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Affitto trilocale</div>
+                  <div className="living-note">Gandria/zone limitrofe, piu economico del centro</div>
+                </div>
+                <div className="living-val">1.200-1.600 CHF/mese</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Cassa malati (obbligatoria)</div>
+                  <div className="living-note">Ticino 2026: media adulto ~583 CHF/mese</div>
+                </div>
+                <div className="living-val" style={{color:'#f87171'}}>~550-600 CHF/mese</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Utenze (luce, riscaldamento, acqua)</div>
+                  <div className="living-note">Inclusa tassa rifiuti</div>
+                </div>
+                <div className="living-val">150-200 CHF/mese</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Internet + telefono</div>
+                  <div className="living-note">Swisscom / Sunrise</div>
+                </div>
+                <div className="living-val">60-80 CHF/mese</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Spesa alimentare</div>
+                  <div className="living-note">Tip: Porlezza (IT) a 5 min per risparmiare</div>
+                </div>
+                <div className="living-val">400-600 CHF/mese</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Auto / trasporto</div>
+                  <div className="living-note">Assicurazione + benzina + parcheggio</div>
+                </div>
+                <div className="living-val">300-400 CHF/mese</div>
+              </div>
+              <div className="living-total">
+                <div className="living-total-label">Totale mensile stimato</div>
+                <div className="living-total-value">~2.700-3.500 CHF</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Tassazione dividendi Ticino */}
+          <div className="living-grid">
+            <div className="living-card">
+              <h3>&#x1F4C8; Dividendi nel Canton Ticino</h3>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Quota tassabile (federale)</div>
+                  <div className="living-note">Partecipazione qualificata &#8805;10%</div>
+                </div>
+                <div className="living-val">70% del dividendo</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Quota tassabile (cantonale TI)</div>
+                  <div className="living-note">Ticino 2025</div>
+                </div>
+                <div className="living-val">70% del dividendo</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Aliquota max cantonale</div>
+                  <div className="living-note">Redditi oltre 360.000 CHF: 12%</div>
+                </div>
+                <div className="living-val">fino a 12%</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Moltiplicatore Lugano (Gandria)</div>
+                  <div className="living-note">Applicato all'imposta cantonale</div>
+                </div>
+                <div className="living-val">90%</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Imposta federale diretta</div>
+                  <div className="living-note">Progressiva, max 11.5%</div>
+                </div>
+                <div className="living-val">fino a 11.5%</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Tassa effettiva sul dividendo</div>
+                  <div className="living-note">Combinata: federale + cantonale + comunale</div>
+                </div>
+                <div className="living-val gold">~15-17%</div>
+              </div>
+            </div>
+
+            <div className="living-card">
+              <h3>&#x1F9EE; Esempio: 100k CHF di utili</h3>
+              <div className="living-row">
+                <div><div className="living-label">Utile societa Dubai</div></div>
+                <div className="living-val">100.000 CHF</div>
+              </div>
+              <div className="living-row">
+                <div><div className="living-label">Corporate tax UAE</div></div>
+                <div className="living-val" style={{color:'#4ade80'}}>0 CHF (0%)</div>
+              </div>
+              <div className="living-row">
+                <div><div className="living-label">Stipendio (24k, tassato ~4%)</div></div>
+                <div className="living-val">-24.000 CHF (netto ~23.000)</div>
+              </div>
+              <div className="living-row">
+                <div><div className="living-label">Dividendo restante</div></div>
+                <div className="living-val">76.000 CHF</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Tassa CH sul dividendo (~16%)</div>
+                  <div className="living-note">Ticino effettiva su partecipazione qualificata</div>
+                </div>
+                <div className="living-val" style={{color:'#f87171'}}>-12.160 CHF</div>
+              </div>
+              <div className="living-row">
+                <div><div className="living-label">AVS su stipendio (quota socio)</div></div>
+                <div className="living-val">-1.270 CHF</div>
+              </div>
+              <div className="living-row">
+                <div><div className="living-label">Cassa malati (anno)</div></div>
+                <div className="living-val" style={{color:'#f87171'}}>-7.000 CHF</div>
+              </div>
+              <div className="living-total">
+                <div className="living-total-label">Netto annuo in tasca</div>
+                <div className="living-total-value">~79.570 CHF</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Confronto completo Ticino vs altri cantoni */}
+          <div className="table-section">
+            <h2>Ticino (Gandria) vs altri cantoni: su 100k di dividendo</h2>
+            <table className="div-comparison-table">
+              <thead>
+                <tr>
+                  <th>Voce</th>
+                  <th style={{color:'#fbbf24'}}>Ticino (Lugano)</th>
+                  <th style={{color:'#4ade80'}}>Zugo</th>
+                  <th style={{color:'#a78bfa'}}>Svitto</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Quota tassabile</td>
+                  <td className="neutral">70%</td>
+                  <td className="good">50%</td>
+                  <td className="good">50%</td>
+                </tr>
+                <tr>
+                  <td>Aliquota effettiva dividendo</td>
+                  <td className="neutral">~15-17%</td>
+                  <td className="good">~11%</td>
+                  <td className="good">~11,5%</td>
+                </tr>
+                <tr>
+                  <td>Cassa malati/mese</td>
+                  <td className="bad">~580 CHF</td>
+                  <td className="good">~380 CHF</td>
+                  <td className="good">~350 CHF</td>
+                </tr>
+                <tr>
+                  <td>Affitto trilocale</td>
+                  <td className="good">1.200-1.600 CHF</td>
+                  <td className="bad">2.000-2.800 CHF</td>
+                  <td className="neutral">1.600-2.200 CHF</td>
+                </tr>
+                <tr>
+                  <td>Lingua</td>
+                  <td className="good">Italiano</td>
+                  <td className="neutral">Tedesco</td>
+                  <td className="neutral">Tedesco</td>
+                </tr>
+                <tr>
+                  <td>Confine Italia</td>
+                  <td className="good">5 minuti (Porlezza)</td>
+                  <td className="bad">2+ ore</td>
+                  <td className="bad">2+ ore</td>
+                </tr>
+                <tr>
+                  <td>Tasse su 100k dividendo</td>
+                  <td className="neutral">~16.000 CHF</td>
+                  <td className="good">~11.000 CHF</td>
+                  <td className="good">~11.500 CHF</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="scenario-note">
+            <strong>Perche Gandria ha senso:</strong> Tasse leggermente piu alte di Zugo (~5k in piu su 100k di dividendo),
+            ma affitto molto piu basso, lingua italiana, confine Porlezza a 5 minuti per la spesa,
+            qualita della vita sul lago di Lugano. Il delta fiscale si compensa in buona parte con il costo vita inferiore.
+            E soprattutto: rispetto a Malta, risparmi comunque 5% di corporate tax su TUTTI gli utili.
           </div>
 
           {/* CTA */}
