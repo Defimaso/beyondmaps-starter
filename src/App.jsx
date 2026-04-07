@@ -1785,6 +1785,213 @@ function App() {
             E soprattutto: rispetto a Malta, risparmi comunque 5% di corporate tax su TUTTI gli utili.
           </div>
 
+          {/* ====== SEZIONE 6: VILLETTA LUGANO vs VALLETTA MALTA ====== */}
+          <div className="section-divider"><span>&#x1F3D8;&#xFE0F;</span></div>
+
+          <div className="section-head">
+            <h2>&#x1F3D8;&#xFE0F; Villetta Lugano vs Appartamento Valletta</h2>
+            <p>Confronto vita reale: villetta appena fuori Lugano (divisa 2 coppie) vs appartamento a Valletta, Malta.
+               Spesa alimentare fatta in Italia (Porlezza, 5 minuti da Gandria).</p>
+          </div>
+
+          <div className="living-grid">
+            {/* Lugano - Villetta */}
+            <div className="living-card" style={{borderColor:'rgba(59,130,246,0.2)'}}>
+              <h3 style={{color:'#60a5fa'}}>&#x1F1E8;&#x1F1ED; Villetta fuori Lugano (a coppia)</h3>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Affitto villetta (50%)</div>
+                  <div className="living-note">3.000 CHF totali / 2 coppie</div>
+                </div>
+                <div className="living-val" style={{color:'#4ade80'}}>1.500 CHF</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Cassa malati (x2 persone)</div>
+                  <div className="living-note">Obbligatoria Ticino, ~580 CHF/persona</div>
+                </div>
+                <div className="living-val" style={{color:'#f87171'}}>1.160 CHF</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Utenze (50% villetta)</div>
+                  <div className="living-note">Luce, gas, acqua, rifiuti divisi</div>
+                </div>
+                <div className="living-val">150-200 CHF</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Internet + telefono (50%)</div>
+                  <div className="living-note">Connessione condivisa</div>
+                </div>
+                <div className="living-val">40-50 CHF</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Spesa alimentare</div>
+                  <div className="living-note">Fatta a Porlezza (IT), 5 min da Gandria: prezzi italiani!</div>
+                </div>
+                <div className="living-val" style={{color:'#4ade80'}}>250-350 CHF</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Auto (assicurazione + benzina)</div>
+                  <div className="living-note">Targhe CH, assicurazione svizzera</div>
+                </div>
+                <div className="living-val">300-400 CHF</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Ristoranti / svago</div>
+                  <div className="living-note">Anche qui: si cena spesso in Italia</div>
+                </div>
+                <div className="living-val">200-300 CHF</div>
+              </div>
+              <div className="living-total">
+                <div className="living-total-label">Totale mensile a coppia</div>
+                <div className="living-total-value" style={{color:'#60a5fa'}}>~3.600-3.960 CHF</div>
+              </div>
+              <div style={{marginTop:12,fontSize:12,color:'#64748b',textAlign:'center'}}>
+                ~ 3.400-3.750 EUR al cambio attuale
+              </div>
+            </div>
+
+            {/* Valletta Malta */}
+            <div className="living-card" style={{borderColor:'rgba(239,68,68,0.2)'}}>
+              <h3 style={{color:'#f87171'}}>&#x1F1F2;&#x1F1F9; Appartamento a Valletta (a coppia)</h3>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Affitto bilocale Valletta</div>
+                  <div className="living-note">Centro storico, 1-bedroom furnished</div>
+                </div>
+                <div className="living-val">900-1.200 EUR</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Assicurazione sanitaria (x2)</div>
+                  <div className="living-note">Privata obbligatoria per expat, min copertura ~108k USD</div>
+                </div>
+                <div className="living-val">150-300 EUR</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Utenze</div>
+                  <div className="living-note">Luce, acqua, gas. L'elettricita a Malta e cara</div>
+                </div>
+                <div className="living-val">80-120 EUR</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Internet + telefono</div>
+                  <div className="living-note">GO, Melita, Epic</div>
+                </div>
+                <div className="living-val">35-50 EUR</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Spesa alimentare</div>
+                  <div className="living-note">Supermercati locali. Costi in crescita.</div>
+                </div>
+                <div className="living-val">400-600 EUR</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Auto / trasporto</div>
+                  <div className="living-note">Auto quasi necessaria, traffico pessimo</div>
+                </div>
+                <div className="living-val">200-350 EUR</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Ristoranti / svago</div>
+                  <div className="living-note">Prezzi in salita, Valletta ormai turistica</div>
+                </div>
+                <div className="living-val">250-400 EUR</div>
+              </div>
+              <div className="living-total">
+                <div className="living-total-label">Totale mensile a coppia</div>
+                <div className="living-total-value" style={{color:'#f87171'}}>~2.015-3.020 EUR</div>
+              </div>
+              <div style={{marginTop:12,fontSize:12,color:'#64748b',textAlign:'center'}}>
+                + 5% corporate tax sugli utili che non paghi a Dubai
+              </div>
+            </div>
+          </div>
+
+          {/* Tabella confronto completo */}
+          <div className="table-section">
+            <h2>Il quadro completo: vivere + tasse (a coppia, per anno)</h2>
+            <table className="div-comparison-table">
+              <thead>
+                <tr>
+                  <th>Voce</th>
+                  <th style={{color:'#60a5fa'}}>Lugano + Dubai</th>
+                  <th style={{color:'#f87171'}}>Valletta + Malta Ltd</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Affitto annuo</td>
+                  <td className="neutral">18.000 CHF (~17.100 EUR)</td>
+                  <td className="neutral">12.000-14.400 EUR</td>
+                </tr>
+                <tr>
+                  <td>Sanita annua (x2)</td>
+                  <td className="bad">13.920 CHF (~13.200 EUR)</td>
+                  <td className="good">1.800-3.600 EUR</td>
+                </tr>
+                <tr>
+                  <td>Spesa (con trick Italia)</td>
+                  <td className="good">3.600 CHF (~3.400 EUR)</td>
+                  <td className="neutral">5.400-7.200 EUR</td>
+                </tr>
+                <tr>
+                  <td>Resto spese vita</td>
+                  <td className="neutral">~8.300 EUR</td>
+                  <td className="neutral">~7.500 EUR</td>
+                </tr>
+                <tr>
+                  <td>Corporate tax su 100k utili</td>
+                  <td className="good">0 EUR</td>
+                  <td className="bad">5.000 EUR</td>
+                </tr>
+                <tr>
+                  <td>Tassa dividendi (su 76k)</td>
+                  <td className="neutral">~12.160 CHF (~11.550 EUR)</td>
+                  <td className="neutral">~7.125 EUR (su 71k netto corp tax)</td>
+                </tr>
+                <tr>
+                  <td>Costi societa (quota coppia)</td>
+                  <td className="good">~3.000 EUR</td>
+                  <td className="bad">~7.500-9.000 EUR</td>
+                </tr>
+                <tr>
+                  <td style={{fontWeight:700}}>Totale annuo (vita + tasse + societa)</td>
+                  <td className="good" style={{fontSize:15}}>~48.500 EUR</td>
+                  <td className="bad" style={{fontSize:15}}>~46.300-53.900 EUR</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="savings">
+            <div className="savings-label">Il verdetto</div>
+            <div className="savings-amount" style={{fontSize:'clamp(20px,3.5vw,32px)'}}>Costi simili, vita migliore</div>
+            <div className="savings-sub" style={{maxWidth:700,margin:'8px auto 0'}}>
+              A Lugano spendi leggermente di piu in sanita, ma vivi in una villetta con lago,
+              fai la spesa a prezzi italiani a Porlezza, parli italiano, e soprattutto
+              non paghi il 5% di corporate tax. Piu gli utili crescono, piu Dubai conviene.
+              Su 200k di utili il gap diventa 10.000+ EUR/anno a favore Dubai.
+            </div>
+          </div>
+
+          <div className="scenario-note">
+            <strong>Nota sulla spesa a Porlezza:</strong> Gandria e a 5 minuti dal confine italiano.
+            La spesa alimentare fatta in Italia costa il 40-50% in meno rispetto ai supermercati svizzeri.
+            Stesso discorso per ristoranti, benzina, e servizi vari. Un vantaggio concreto che nessun
+            altro cantone svizzero offre (tranne Ginevra con la Francia, ma li le tasse sono piu alte).
+          </div>
+
           {/* CTA */}
           <div className="cta">
             <h2>&#x2708;&#xFE0F; Pronti a partire?</h2>
