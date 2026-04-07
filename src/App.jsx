@@ -1992,6 +1992,242 @@ function App() {
             altro cantone svizzero offre (tranne Ginevra con la Francia, ma li le tasse sono piu alte).
           </div>
 
+          {/* ====== SEZIONE 7: IL KILLER — SOLO STIPENDIO, ZERO DIVIDENDI ====== */}
+          <div className="section-divider"><span>&#x1F4A1;</span></div>
+
+          <div style={{
+            background: 'linear-gradient(135deg, rgba(74,222,128,0.06) 0%, rgba(59,130,246,0.06) 100%)',
+            border: '2px solid rgba(74,222,128,0.25)',
+            borderRadius: 20,
+            padding: '48px 32px',
+            textAlign: 'center',
+            marginBottom: 48
+          }}>
+            <div style={{fontSize:13,fontWeight:600,color:'#4ade80',textTransform:'uppercase',letterSpacing:1,marginBottom:12}}>
+              Lo scenario reale
+            </div>
+            <h2 style={{fontFamily:'Space Grotesk, sans-serif',fontSize:'clamp(24px,4vw,36px)',fontWeight:700,color:'#f1f5f9',marginBottom:12}}>
+              Solo stipendio. Zero dividendi.
+            </h2>
+            <p style={{fontSize:16,color:'#94a3b8',maxWidth:700,margin:'0 auto',lineHeight:1.7}}>
+              Se non ti servono i dividendi, <strong style={{color:'#4ade80'}}>non li prendi e non ci paghi tasse</strong>.
+              L'utile resta nella societa a Dubai al 0%. Ti paghi solo lo stipendio che ti serve per vivere in Svizzera.
+              Questo cambia tutto.
+            </p>
+          </div>
+
+          {/* Come funziona */}
+          <div className="flow-diagram">
+            <h3>Come funziona davvero</h3>
+            <div className="flow-steps">
+              <div className="flow-step">
+                <div className="flow-step-label">Utili in societa</div>
+                <div className="flow-step-value green">0% tax</div>
+                <div className="flow-step-sub">Restano a Dubai</div>
+              </div>
+              <div className="flow-arrow">&#x27A1;&#xFE0F;</div>
+              <div className="flow-step">
+                <div className="flow-step-label">Stipendio</div>
+                <div className="flow-step-value gold">50.000 CHF</div>
+                <div className="flow-step-sub">Solo per costo vita</div>
+              </div>
+              <div className="flow-arrow">&#x27A1;&#xFE0F;</div>
+              <div className="flow-step">
+                <div className="flow-step-label">Tasse + AVS</div>
+                <div className="flow-step-value red">~9.350 CHF</div>
+                <div className="flow-step-sub">Unico costo fiscale</div>
+              </div>
+              <div className="flow-arrow">&#x27A1;&#xFE0F;</div>
+              <div className="flow-step">
+                <div className="flow-step-label">Dividendi</div>
+                <div className="flow-step-value green">0</div>
+                <div className="flow-step-sub">Non li prendi = 0 tasse</div>
+              </div>
+              <div className="flow-arrow">&#x27A1;&#xFE0F;</div>
+              <div className="flow-step">
+                <div className="flow-step-label">Netto in tasca</div>
+                <div className="flow-step-value green">~43.300 CHF</div>
+                <div className="flow-step-sub">Copre vita + extra</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Dettaglio stipendio */}
+          <div className="living-grid">
+            <div className="living-card" style={{borderColor:'rgba(74,222,128,0.25)'}}>
+              <h3 style={{color:'#4ade80'}}>&#x1F4B0; Stipendio 50k CHF: dettaglio tasse</h3>
+              <div className="living-row">
+                <div><div className="living-label">Stipendio lordo annuo</div></div>
+                <div className="living-val">50.000 CHF</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">AVS/AI/IPG (tua quota 5.3%)</div>
+                  <div className="living-note">Uguale quota pagata dalla societa</div>
+                </div>
+                <div className="living-val" style={{color:'#f87171'}}>-2.650 CHF</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Assicurazione disoccupazione (1.1%)</div>
+                </div>
+                <div className="living-val" style={{color:'#f87171'}}>-550 CHF</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Imposta reddito Ticino (~6-8%)</div>
+                  <div className="living-note">Federale + cantonale + comunale su 50k</div>
+                </div>
+                <div className="living-val" style={{color:'#f87171'}}>-3.500 CHF</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">AVS quota azienda (5.3%)</div>
+                  <div className="living-note">Costo aggiuntivo sulla societa</div>
+                </div>
+                <div className="living-val" style={{color:'#f87171'}}>-2.650 CHF</div>
+              </div>
+              <div className="living-total">
+                <div className="living-total-label">Netto in tasca</div>
+                <div className="living-total-value" style={{color:'#4ade80'}}>~43.300 CHF</div>
+              </div>
+              <div style={{marginTop:8,fontSize:13,color:'#64748b',textAlign:'center'}}>
+                Aliquota effettiva reale: ~18.7% (incluso AVS)
+              </div>
+            </div>
+
+            <div className="living-card" style={{borderColor:'rgba(74,222,128,0.25)'}}>
+              <h3 style={{color:'#4ade80'}}>&#x1F9EE; Gli utili che NON prendi</h3>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Utile societario (esempio)</div>
+                </div>
+                <div className="living-val">200.000 CHF</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Di cui pagato come stipendio</div>
+                </div>
+                <div className="living-val">-50.000 CHF</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Utile non distribuito</div>
+                </div>
+                <div className="living-val" style={{color:'#4ade80'}}>150.000 CHF</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Corporate tax UAE su quei 150k</div>
+                  <div className="living-note">Restano in societa a Dubai</div>
+                </div>
+                <div className="living-val" style={{color:'#4ade80',fontSize:20,fontWeight:900}}>0 CHF</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Dividendi dichiarati</div>
+                  <div className="living-note">Non li prendi = non esistono</div>
+                </div>
+                <div className="living-val" style={{color:'#4ade80',fontSize:20,fontWeight:900}}>0 CHF</div>
+              </div>
+              <div className="living-row">
+                <div>
+                  <div className="living-label">Tasse svizzere su dividendi</div>
+                </div>
+                <div className="living-val" style={{color:'#4ade80',fontSize:20,fontWeight:900}}>0 CHF</div>
+              </div>
+              <div className="living-total">
+                <div className="living-total-label">Tasse totali su 200k di utili</div>
+                <div className="living-total-value" style={{color:'#4ade80'}}>Solo 9.350 CHF</div>
+              </div>
+              <div style={{marginTop:8,fontSize:13,color:'#64748b',textAlign:'center'}}>
+                = 4.7% di aliquota totale su 200k
+              </div>
+            </div>
+          </div>
+
+          {/* IL confronto killer */}
+          <div className="table-section">
+            <h2>Il confronto che chiude il discorso</h2>
+            <table className="div-comparison-table">
+              <thead>
+                <tr>
+                  <th>Su 200k di utili</th>
+                  <th style={{color:'#4ade80'}}>Dubai (solo stipendio)</th>
+                  <th style={{color:'#f87171'}}>Malta (da zero)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Corporate tax</td>
+                  <td className="good">0</td>
+                  <td className="bad">10.000 EUR (5%)</td>
+                </tr>
+                <tr>
+                  <td>Stipendio 50k: tasse + AVS</td>
+                  <td className="neutral">9.350 CHF (~8.880 EUR)</td>
+                  <td className="neutral">~9.000 EUR (stima simile)</td>
+                </tr>
+                <tr>
+                  <td>Utile non distribuito (150k)</td>
+                  <td className="good">0 tasse</td>
+                  <td className="bad">Gia tassato 5% = 7.500 EUR pagati</td>
+                </tr>
+                <tr>
+                  <td>Costi societa annui (quota coppia)</td>
+                  <td className="good">~3.000 EUR</td>
+                  <td className="bad">~7.500-9.000 EUR</td>
+                </tr>
+                <tr>
+                  <td style={{fontWeight:700}}>Tasse + costi totali</td>
+                  <td className="good" style={{fontSize:16}}>~11.880 EUR</td>
+                  <td className="bad" style={{fontSize:16}}>~26.500-28.000 EUR</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="savings" style={{borderColor:'rgba(74,222,128,0.3)',background:'linear-gradient(135deg, rgba(74,222,128,0.12) 0%, rgba(59,130,246,0.08) 100%)'}}>
+            <div className="savings-label">Risparmio annuo con Dubai (su 200k utili)</div>
+            <div className="savings-amount">~16.000 EUR</div>
+            <div className="savings-sub" style={{maxWidth:600,margin:'8px auto 0'}}>
+              E piu crescono gli utili, piu il gap aumenta.
+              Su 500k: ~30.000 EUR/anno di risparmio.
+              Su 1M: ~55.000+ EUR/anno.
+            </div>
+          </div>
+
+          {/* Perche funziona */}
+          <div className="features" style={{marginBottom:48}}>
+            <div className="feature">
+              <div className="feature-icon" style={{color:'#4ade80'}}>0%</div>
+              <h3>Utile non distribuito = 0 tasse</h3>
+              <p>A Dubai l'utile in societa non e tassato. A Malta paghi il 5% a prescindere, che tu lo prenda o no.</p>
+            </div>
+            <div className="feature">
+              <div className="feature-icon" style={{color:'#fbbf24'}}>50k</div>
+              <h3>Stipendio = solo il necessario</h3>
+              <p>Ti paghi 50k CHF per le spese svizzere. Tasse al 18.7% incluso AVS. Il resto sta a Dubai.</p>
+            </div>
+            <div className="feature">
+              <div className="feature-icon" style={{color:'#60a5fa'}}>&#x267E;&#xFE0F;</div>
+              <h3>Scala all'infinito</h3>
+              <p>Che la societa faccia 100k o 1M, tu paghi sempre le stesse tasse sullo stipendio. Il resto cresce tax-free a Dubai.</p>
+            </div>
+            <div className="feature">
+              <div className="feature-icon" style={{color:'#a78bfa'}}>&#x1F3E6;</div>
+              <h3>Usi i soldi dalla societa</h3>
+              <p>Investimenti, spese aziendali, viaggi di lavoro, reinvestimento: tutto dalla societa senza generare dividendi.</p>
+            </div>
+          </div>
+
+          <div className="scenario-note">
+            <strong>Il punto chiave:</strong> La differenza tra Dubai e Malta non e solo nei costi di gestione o nella burocrazia.
+            E nel fatto che a Malta il 5% lo paghi comunque sugli utili, che te li prendi o no.
+            A Dubai no. Se ti basta uno stipendio per vivere, il resto cresce senza essere tassato.
+            Questo e il vero game changer.
+          </div>
+
           {/* CTA */}
           <div className="cta">
             <h2>&#x2708;&#xFE0F; Pronti a partire?</h2>
