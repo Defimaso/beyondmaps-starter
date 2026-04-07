@@ -2228,6 +2228,140 @@ function App() {
             Questo e il vero game changer.
           </div>
 
+          {/* ====== SEZIONE 8: PERCHE LA SVIZZERA E NON MALTA — VITA VERA ====== */}
+          <div className="section-divider"><span>&#x1F3D4;&#xFE0F;</span></div>
+
+          <div style={{
+            background: 'linear-gradient(135deg, rgba(59,130,246,0.06) 0%, rgba(139,92,246,0.06) 100%)',
+            border: '2px solid rgba(59,130,246,0.2)',
+            borderRadius: 20,
+            padding: '48px 32px',
+            textAlign: 'center',
+            marginBottom: 48
+          }}>
+            <div style={{fontSize:13,fontWeight:600,color:'#60a5fa',textTransform:'uppercase',letterSpacing:1,marginBottom:12}}>
+              Non solo numeri
+            </div>
+            <h2 style={{fontFamily:'Space Grotesk, sans-serif',fontSize:'clamp(24px,4vw,36px)',fontWeight:700,color:'#f1f5f9',marginBottom:12}}>
+              Perche la Svizzera e non Malta
+            </h2>
+            <p style={{fontSize:16,color:'#94a3b8',maxWidth:700,margin:'0 auto',lineHeight:1.7}}>
+              I numeri contano, ma la vita di tutti i giorni conta di piu.
+              Abbiamo le famiglie a Roma, lavoriamo online, e vogliamo vivere bene senza sentirci su un'isola.
+            </p>
+          </div>
+
+          <div className="features" style={{gridTemplateColumns:'repeat(auto-fit, minmax(280px, 1fr))',marginBottom:32}}>
+            <div className="feature" style={{borderColor:'rgba(59,130,246,0.15)'}}>
+              <div className="feature-icon">&#x1F686;</div>
+              <h3>Roma in 3 ore di treno</h3>
+              <p>Da Lugano prendi il treno e in 3 ore sei a Roma Termini. Niente aerei, niente check-in, niente stress. Parti la mattina, pranzi con la famiglia.</p>
+            </div>
+            <div className="feature" style={{borderColor:'rgba(59,130,246,0.15)'}}>
+              <div className="feature-icon">&#x1F30D;</div>
+              <h3>Centro Europa</h3>
+              <p>Milano 1 ora. Zurigo 2 ore. Monaco 4 ore. Parigi 4 ore. Sei al centro di tutto, non su un'isola in mezzo al Mediterraneo.</p>
+            </div>
+            <div className="feature" style={{borderColor:'rgba(59,130,246,0.15)'}}>
+              <div className="feature-icon">&#x2708;&#xFE0F;</div>
+              <h3>3 aeroporti vicini</h3>
+              <p>Malpensa (1h), Zurigo (2h30), Bergamo (2h). Voli low cost per tutta Europa e diretti per Dubai. Da Malta? Solo Malta Airport.</p>
+            </div>
+            <div className="feature" style={{borderColor:'rgba(59,130,246,0.15)'}}>
+              <div className="feature-icon">&#x1F5E3;&#xFE0F;</div>
+              <h3>Si parla italiano</h3>
+              <p>Ticino = italiano. Uffici, medici, supermercati, scuole: tutto in italiano. A Malta? Inglese e maltese, e la burocrazia e in inglese.</p>
+            </div>
+            <div className="feature" style={{borderColor:'rgba(59,130,246,0.15)'}}>
+              <div className="feature-icon">&#x1F6D2;</div>
+              <h3>Spesa in Italia a 5 minuti</h3>
+              <p>Gandria confina con Porlezza. Supermercato, ristoranti, benzina, parrucchiere: prezzi italiani, non svizzeri. Risparmi il 40-50%.</p>
+            </div>
+            <div className="feature" style={{borderColor:'rgba(59,130,246,0.15)'}}>
+              <div className="feature-icon">&#x1F3E0;</div>
+              <h3>Villetta con lago, non bilocale</h3>
+              <p>A 1.500 CHF a coppia vivi in una villetta sul lago di Lugano. A Valletta con gli stessi soldi prendi un bilocale senza vista.</p>
+            </div>
+          </div>
+
+          {/* Confronto diretto lifestyle */}
+          <div className="table-section">
+            <h2>Vita quotidiana: Lugano vs Valletta</h2>
+            <table className="div-comparison-table">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th style={{color:'#60a5fa'}}>Lugano (Gandria)</th>
+                  <th style={{color:'#f87171'}}>Valletta (Malta)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Famiglie a Roma</td>
+                  <td className="good">3h treno diretto</td>
+                  <td className="bad">Aereo obbligatorio (2h + aeroporto)</td>
+                </tr>
+                <tr>
+                  <td>Milano</td>
+                  <td className="good">1 ora</td>
+                  <td className="bad">Aereo, 2h+ porta a porta</td>
+                </tr>
+                <tr>
+                  <td>Weekend in Europa</td>
+                  <td className="good">Treno/auto ovunque</td>
+                  <td className="bad">Solo aereo, sempre</td>
+                </tr>
+                <tr>
+                  <td>Aeroporti</td>
+                  <td className="good">3 hub internazionali vicini</td>
+                  <td className="neutral">1 solo aeroporto</td>
+                </tr>
+                <tr>
+                  <td>Lingua</td>
+                  <td className="good">Italiano</td>
+                  <td className="neutral">Inglese/Maltese</td>
+                </tr>
+                <tr>
+                  <td>Clima</td>
+                  <td className="neutral">4 stagioni, inverno mite al lago</td>
+                  <td className="good">Caldo tutto l'anno</td>
+                </tr>
+                <tr>
+                  <td>Qualita sanita</td>
+                  <td className="good">Eccellente (sistema svizzero)</td>
+                  <td className="neutral">Buona, ma privata obbligatoria</td>
+                </tr>
+                <tr>
+                  <td>Spesa alimentare</td>
+                  <td className="good">A prezzi italiani (Porlezza)</td>
+                  <td className="neutral">Prezzi in aumento, isola</td>
+                </tr>
+                <tr>
+                  <td>Traffico</td>
+                  <td className="good">Minimo</td>
+                  <td className="bad">Pessimo, isola piccola</td>
+                </tr>
+                <tr>
+                  <td>Casa</td>
+                  <td className="good">Villetta con lago</td>
+                  <td className="neutral">Appartamento</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="savings">
+            <div className="savings-label">In sintesi</div>
+            <div className="savings-amount" style={{fontSize:'clamp(18px,3vw,28px)',lineHeight:1.3}}>
+              Stesse tasse (o meno). Vita migliore.<br/>Famiglie a 3 ore. Centro Europa.
+            </div>
+            <div className="savings-sub" style={{maxWidth:650,margin:'12px auto 0'}}>
+              Malta ha senso se vuoi stare su un'isola al caldo tutto l'anno.
+              Ma se hai la famiglia a Roma, lavori online, e vuoi vivere bene senza sentirti isolato,
+              la Svizzera italiana e la scelta ovvia. E con Dubai come societa, paghi meno tasse di Malta.
+            </div>
+          </div>
+
           {/* CTA */}
           <div className="cta">
             <h2>&#x2708;&#xFE0F; Pronti a partire?</h2>
